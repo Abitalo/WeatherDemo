@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#60a0a6">
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/back_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/icon_back"/>
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="城市"
+        android:textSize="36sp"
+        android:background="#00000000"
+        android:id="@+id/city_title"
+        android:layout_alignTop="@+id/back_btn"
+        android:layout_toRightOf="@+id/back_btn"
+        android:layout_toEndOf="@+id/back_btn" />
+
+    <ImageButton
+        android:id="@+id/favorite_btn"
+        android:background="#00000000"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignBottom="@+id/city_title"
+        android:layout_alignRight="@+id/citycard"
+        android:layout_alignEnd="@+id/citycard"
+        android:src="@drawable/iconfont_favorite"/>
+
+    <android.support.v7.widget.CardView
+        app:cardBackgroundColor="#647599"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/list"
+        android:layout_below="@+id/back_btn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/citycard">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+                <TextView
+                    android:id="@+id/city_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:maxLines="14"
+                    android:lineSpacingExtra="2dp"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/abc_text_size_large_material"/>
+                <TextView
+                    android:id="@+id/city_temperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:maxLines="14"
+                    android:lineSpacingExtra="2dp"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/abc_text_size_large_material"/>
+
+                <TextView
+                    android:id="@+id/city_AQI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:maxLines="14"
+                    android:lineSpacingExtra="2dp"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/abc_text_size_large_material"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/city_quality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:maxLines="14"
+                    android:lineSpacingExtra="2dp"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/abc_text_size_large_material"
+                    android:layout_below="@+id/city_AQI"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:padding="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/city_weather_icon"
+                android:src="@drawable/icon_00"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp"
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="320dp" />
+    </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>
